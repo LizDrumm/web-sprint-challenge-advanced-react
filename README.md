@@ -29,14 +29,75 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+class, constructor, and render/return.
+C:Declare your class, and extend the React.Component Base class:
+
+class FooComponent extends React.Component {
+
+
+C:Now we'll set up our constructor and add state.:
+constructor() {
+  super();
+  this.state = {};
+}
+
+R:Render some UI and return some JSX.:
+render() {
+  return <div>Hello, I am Foo Component</div>;
+}
+
+
+ALL TOGETHER: Our final component should look like this.
+class FooComponent extends React.Component {
+  constructor() { 
+    super();
+    this.state = {};
+  }
+  render() {
+    return <div>Hello, I am Foo Component</div>;
+  }
+} 
 
 2. Describe the different phases of the component lifecycle.
 
+Phase 1: Rendering Phase, Mounting, Birth of a Component
+  - construction function is called and stat data initilaized 
+  - componentDidMount()
+Phase 2: Pre-Commit Phase, Updating, Growth
+  - any new props recieved from parents will trigger updates to child
+  - componentDidUpdate()
+Phase 3: Commit Phase, Unmounting, Death of a component
+  - componentWillUnmount()
+
 3. Demonstrate an understanding of class component lifecycle methods.
+
+Mounting:
+constructor()
+render()
+componentDidMount()
+
+Updating:
+shouldComponentUpdate()
+render()
+componentDidUpdate()
+
+Unmounting:
+componentWillUnmount()
+
+
 
 4. Define stateful logic.
 
+  Logic Build into a Component- ex a function that handles a click event or a function that toggles state
+
 5. Describe how to test a React component with React Testing Library.
+
+When usisng react-testing-library you are preforming an integration test. This tests not how the app works, but what id displays. It verifys that several componotes work together. If a user behavior happens- does DOM reflect this behavior?
+
+There are three steps:
+1. Arrange- Set up comments to test
+2. Act- execute our behavior and extract what we are testing
+3. Assert- check to see if we got the response we expected 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
