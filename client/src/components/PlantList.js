@@ -2,6 +2,7 @@ import React, { Component,useState } from "react";
 
 import axios from "axios";
 
+//class component and life cycles 
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
   constructor (){

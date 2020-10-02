@@ -11,6 +11,7 @@ const initialValue = {
   };
 
 const useForm =()=>{
+    //    initialize state
 const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 const [values, setValues] = useState(initialValue);
 
@@ -23,6 +24,8 @@ const handleSubmit = (e) => {
   setShowSuccessMessage(true);
 };
 
+
+//return custom hook here 
 return[handleChanges, handleSubmit, values, showSuccessMessage]
 
 }

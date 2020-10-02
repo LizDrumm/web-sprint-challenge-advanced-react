@@ -36,6 +36,6 @@ test("form shows success message on submit with form details", () => {
     const submitButton = screen.getByTestId (/submit/i)
     fireEvent.click(submitButton)
 
-    const successMesage = screen.getByTestId(/successMessage/i)
+    const successMessage = screen.getByTestId(/successMessage/i)
 
 });
